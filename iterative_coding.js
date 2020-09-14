@@ -7,11 +7,11 @@ const index = Math.floor(Math.random() * word.length);
 const character = "t";
 
 /**
-  * replaces a letter in a word
+  * Replaces a letter in a word
   * @param {string} string - Word being changed
   * @param {number} index - Index of character to be replaced
-  * @param {string} character - letter to replace with
-  * @return {string} 
+  * @param {string} character - letter to replace above character with
+  * @return {string} Word after character has been replaced
   */
 function replaceCharacter(string, index, character){
   
