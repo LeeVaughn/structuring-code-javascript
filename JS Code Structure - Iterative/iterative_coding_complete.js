@@ -14,6 +14,8 @@ function replaceLetter(string, index, letter){
   splitString[index] = letter;
   const newString = splitString.join("");
 
+  console.log(newString);
+  
   return newString;
 }
 
