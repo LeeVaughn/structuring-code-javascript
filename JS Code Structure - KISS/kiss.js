@@ -20,17 +20,13 @@ function ten(num) {
   }
 }
 
-// calling the check function and
-// passing in a number to check
-// then printing out the result
 console.log(ten(number));
 
 // a function called go to movies
-// it randomly chooses a movie
-// it picks some snacks for you
-// then prints out a message with
-// your movie and snacks
-function go_to_movies(money) {
+// randomly chooses a movie
+// if money is greater than zero, it picks some snacks for you
+// then returns a message with your movie and snacks
+function goToMovies(money) {
   //   list of movies
   const movies = [
     "Parasite",
@@ -45,10 +41,10 @@ function go_to_movies(money) {
     "The Kings Speech",
   ];
   //   randomly choose a movie
-  const movie_choice = movies[randomChoice(movies)];
+  const movieChoice = movies[randomChoice(movies)];
 
   //   dictionary of snacks and amounts
-  let purchased_snacks = { popcorn: 0, soda: 0, candy: 0 };
+  let purchasedSnacks = { popcorn: 0, soda: 0, candy: 0 };
   //   make sure you have money first
   if (money > 0) {
     //     while money is greater then zero
@@ -57,33 +53,31 @@ function go_to_movies(money) {
       //       if money is greater than 3
       //       purchase popcorn
       if (money >= 3) {
-        purchased_snacks["popcorn"] = purchased_snacks["popcorn"] + 1;
+        purchasedSnacks["popcorn"] = purchasedSnacks["popcorn"] + 1;
         money = money - 3;
       }
       //       if money is greater than 2
       //       purchase soda
       if (money >= 2) {
-        purchased_snacks["soda"] = purchased_snacks["soda"] + 1;
+        purchasedSnacks["soda"] = purchasedSnacks["soda"] + 1;
         money = money - 2;
       }
       //       if money is greater than 1
       //       purchase candy
       if (money >= 1) {
-        purchased_snacks["candy"] = purchased_snacks["candy"] + 1;
+        purchasedSnacks["candy"] = purchasedSnacks["candy"] + 1;
         money = money - 1;
       }
     }
   }
-  return `You went to see ${movie_choice} and had ${JSON.stringify(
-    purchased_snacks,
+  return `You went to see ${movieChoice} and had ${JSON.stringify(
+    purchasedSnacks,
     null,
     4
   )}.`;
 }
 
-// calling the go to movie function
-// and printing the result
-console.log(go_to_movies(10));
+console.log(goToMovies(10));
 
 // list of dictionaries containing some treehouse pets
 const pets = [
