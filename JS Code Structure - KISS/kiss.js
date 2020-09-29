@@ -44,7 +44,7 @@ function goToMovies(money) {
   const movieChoice = movies[randomChoice(movies)];
 
   //   dictionary of snacks and amounts
-  let purchasedSnacks = { popcorn: 0, soda: 0, candy: 0 };
+  const purchasedSnacks = { popcorn: 0, soda: 0, candy: 0 };
   //   make sure you have money first
   if (money > 0) {
     //     while money is greater then zero
@@ -91,7 +91,7 @@ const pets = [
 
 // loop through each pet in the list
 for (const element of pets) {
-  //   loop through each dictionary
+  //   loop through each object
   for (const property in element) {
     //     print out the attributes for each pet
     console.log(`${property} : ${element[property]}`);
