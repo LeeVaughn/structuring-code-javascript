@@ -27,30 +27,32 @@ function randomMovie() {
   return movies[randomChoice(movies)];
 }
 
-// randomly chooses a movie
-// if money is greater than zero, it picks some snacks for you 
-// then returns a message with your movie and snacks
-function goToMovies(money) {
-  const movieChoice = randomMovie();
-
-  let purchasedSnacks = { popcorn: 0, soda: 0, candy: 0 };
-
+function buySnacks(money) {
+  const purchasedSnacks = {'popcorn': 0, 'soda': 0, 'candy': 0};
+  
   if (money > 0) {
     while (money > 0) {
       if (money >= 3) {
-        purchasedSnacks["popcorn"] = purchasedSnacks["popcorn"] + 1;
+        purchasedSnacks['popcorn'] = purchasedSnacks['popcorn'] + 1;
         money = money - 3;
       }
       if (money >= 2) {
-        purchasedSnacks["soda"] = purchasedSnacks["soda"] + 1;
+        purchasedSnacks['soda'] = purchasedSnacks['soda'] + 1;
         money = money - 2;
       }
       if (money >= 1) {
-        purchasedSnacks["candy"] = purchasedSnacks["candy"] + 1;
+        purchasedSnacks['candy'] = purchasedSnacks['candy'] + 1;
         money = money - 1;
       }
     }
   }
+
+  return purchasedSnacks;
+}
+
+function goToMovies(money) {
+  const movieChoice = randomMovie();
+  const purchasedSnacks = buySnacks(money)
 
   return `You went to see ${movieChoice} and had ${JSON.stringify(
     purchasedSnacks,
@@ -70,8 +72,8 @@ const pets = [
   { name: "Ace", animal: "cat", breed: "Unknown" },
 ];
 
-for (const element of pets) {
-  for (const property in element) {
-    console.log(`${property} : ${element[property]}`);
-  }
+for (const element of pets){
+  console.log(`Name: ${element['name']}`);
+  console.log(`Animal: ${element['animal']}`);
+  console.log(`Breed: ${element['breed']}`);
 }
