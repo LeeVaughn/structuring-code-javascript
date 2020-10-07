@@ -10,13 +10,38 @@ const vegetables = [
   { name: "red peppers", price: "3.00" },
 ];
 
-fruits[0]["price"] = parseFloat(fruits[0]["price"]);
-fruits[1]["price"] = parseFloat(fruits[1]["price"]);
-fruits[2]["price"] = parseFloat(fruits[2]["price"]);
+// for (const fruit of fruits) {
+//   fruit["price"] = parseFloat(fruit["price"]);
+// }
 
-vegetables[0]["price"] = parseFloat(vegetables[0]["price"]);
-vegetables[1]["price"] = parseFloat(vegetables[1]["price"]);
-vegetables[2]["price"] = parseFloat(vegetables[2]["price"]);
+// for (const vegetable of vegetables) {
+//   vegetable["price"] = parseFloat(vegetable["price"]);
+// }
+
+// for (const fruit of fruits) {
+//   fruit["location"] = "produce section";
+// }
+
+// for (const vegetable of vegetables) {
+//   vegetable["location"] = "produce section";
+// }
+
+function convertPrice(array) {
+  for (const object of array) {
+    object["price"] = parseFloat(object["price"]);
+  }
+}
+
+convertPrice(fruits)
+convertPrice(vegetables)
+
+// fruits[0]["price"] = parseFloat(fruits[0]["price"]);
+// fruits[1]["price"] = parseFloat(fruits[1]["price"]);
+// fruits[2]["price"] = parseFloat(fruits[2]["price"]);
+
+// vegetables[0]["price"] = parseFloat(vegetables[0]["price"]);
+// vegetables[1]["price"] = parseFloat(vegetables[1]["price"]);
+// vegetables[2]["price"] = parseFloat(vegetables[2]["price"]);
 
 fruits[0]["location"] = "produce section";
 fruits[1]["location"] = "produce section";
