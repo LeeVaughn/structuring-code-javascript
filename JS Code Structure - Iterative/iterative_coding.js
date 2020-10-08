@@ -1,4 +1,4 @@
-let word = "computer";
+const word = "computer";
 const index = Math.floor(Math.random() * word.length);
 const letter = "b";
 
