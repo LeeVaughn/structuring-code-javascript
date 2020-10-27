@@ -1,23 +1,23 @@
 function crust() {
-  options = ["thin", "hand tossed", "pan"];
+  const options = ["thin", "hand tossed", "pan"];
 
   return options[Math.floor(Math.random() * options.length)];
 }
 
 function cheese() {
-  options = ["provolone", "parmesan", "mozzarella"];
+  const options = ["provolone", "parmesan", "mozzarella"];
 
   return options[Math.floor(Math.random() * options.length)];
 }
 
 function veggies() {
-  options = ["green Peppers", "onions", "mushrooms", "banana peppers"];
+  const options = ["green Peppers", "onions", "mushrooms", "banana peppers"];
 
   return options[Math.floor(Math.random() * options.length)];
 }
 
 function meat() {
-  options = ["pepperoni", "sausage", "ham"];
+  const options = ["pepperoni", "sausage", "ham"];
 
   return options[Math.floor(Math.random() * options.length)];
 }
