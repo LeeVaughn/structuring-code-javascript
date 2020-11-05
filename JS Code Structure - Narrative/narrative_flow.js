@@ -26,4 +26,4 @@ function createPizza() {
   return `Your random pizza is a ${crust()} pizza with ${meat()}, ${veggies()}, and ${cheese()}!`
 }
 
-console.log(createPizza())
+console.log(createPizza());
